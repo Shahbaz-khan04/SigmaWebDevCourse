@@ -1,0 +1,16 @@
+.middle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.middle p {
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.middle span {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: 14px;
+}
