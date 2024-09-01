@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script src="tut55_QuickQuiz.js"></script>
-</body>
+  </head>
+  <body>
+    <script>
+      let myName = prompt("What is your Name?");
+      let myPhoneNum = prompt("What is your Phone Number?");
+      let myMarks = prompt("What are your marks?");
+
+      let studentDetails = {
+        name: myName,
+        phoneNum: myPhoneNum,
+        marks: myMarks,
+      };
+
+      console.log(studentDetails);
+      console.log(typeof studentDetails);
+    </script>
+  </body>
 </html>
