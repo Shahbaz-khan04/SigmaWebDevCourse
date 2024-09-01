@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 10 "Business Name Generator"</title>
+  </head>
+  <body>
+    <script>
+      let adjectives = {
+        0: "Crazy",
+        1: "Amazing",
+        2: "Fire",
+      };
+
+      let shopNames = {
+        0: "Engine",
+        1: "Foods",
+        2: "Garments",
+      };
+
+      let anotherWords = {
+        0: "Bros",
+        1: "Limited",
+        2: "Hub",
+      };
+
+      function getWord(obj) {
+        let length = Object.keys(obj).length;
+        let random = Math.floor(Math.random() * length);
+
+        return obj[random];
+      }
+
+      let adj = getWord(adjectives);
+      let shopName = getWord(shopNames);
+      let anotherWord = getWord(anotherWords);
+
+      alert(`Your Business Name is : ${adj} ${shopName} ${anotherWord}`)
+
+    </script>
+  </body>
+</html>
