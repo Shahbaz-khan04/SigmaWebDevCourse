@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = [1, 2, 3, 4, 5];
+        // let arr2 = [7, 9, 8];
+        // console.log(arr)
+        // console.log(arr.length)
+        // console.log("toString() using arr ", arr.toString())
+        // console.log("join() using arr ", arr.join(" and "))
+        // console.log("pop() using arr ", arr.pop(), arr)
+        // console.log("push() using arr", arr.push("Hi"), arr)
+        // console.log("shift() using arr ", arr.shift(), arr)
+        // console.log("unshift() using arr ", arr.unshift("Hello"), arr)
+        // console.log("delete() using arr ", delete arr[4], arr)
+        // console.log("'Empty' mean array has allocated memory but there is no data stored there")
+        // console.log("concat() using arr and arr2 ", arr.concat(arr2), arr, arr2)
+        // console.log("sort() using arr2 ", arr2.sort(), arr2)
+        // console.log("splice(), removing elements  using arr ", arr.splice(3, 2), arr)
+        // console.log("splice(), adding elements in place of removed elements  using arr ", arr.splice(1, 3, 233, 2444, 4555), arr)
+        // console.log("reverse() ", arr.reverse(), arr)
+
+
+        //Using Loops
+
+        let a = [1, 3, 5, 7, 2]
+        console.log(a)
+        a.forEach((value, index, arr) => {
+            console.log("forEach() ", value, index, arr)
+        });
+        let newArr = a.map((value, index, arr) => {
+            return value**2
+        })
+        console.log("map() ", newArr)
+
+        const greaterThanSeven = (e) => {
+            if(e>40){
+                return true
+            }
+            return false
+        }
+        let newArr2 = a.filter(greaterThanSeven)
+        console.log("filter() ", newArr2, a)
+
+        console.log("reduce() ", a.reduce((a , b) => {
+            return a + b
+        }))
+        let newArr3 = Array.from("Harry")
+        console.log(newArr3)
+
+
+    </script>
+</body>
+</html>
