@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 12 Give random colors to boxes</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        width: 45px;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid black;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+    </div>
+
+    <script>
+      let boxes = document.getElementsByClassName("box");
+
+      // function getRandomColor() {
+      //   let rgbColor = []
+      //   for (let i = 0; i < 3; i++) {
+      //     rgbColor.push(Math.floor(Math.random() * 255))
+      //   }
+      //   return rgbColor
+      // }
+      // let color = [];
+      // Array.from(boxes).forEach((box) => {
+      //   color = getRandomColor()
+      //   box.style.color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+      // })
+
+      function getRandomColor() {
+        const randomValue = () => Math.ceil(Math.random() * 255);
+        return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
+      }
+      Array.from(boxes).forEach((box) => {
+        box.style.color = getRandomColor();
+      });
+    </script>
+  </body>
+</html>

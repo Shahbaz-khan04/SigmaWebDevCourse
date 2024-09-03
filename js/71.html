@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container red bg-blue">
+        <div class="box">I am a box</div>
+        <div class="box">I am a box</div>
+    </div>
+
+    <script>
+        let cont = document.querySelector(".container")
+        console.log("innerHTML", cont.innerHTML)
+        console.log("innerText ", cont.innerText)
+        console.log("textContent ", cont.textContent)
+        console.log("outerHTML ", cont.outerHTML)
+        console.log("tagName ", cont.tagName)
+        cont.hidden = true
+        cont.hidden = false
+        console.log("hasAttribute ", cont.hasAttribute("style"))
+        // cont.setAttribute("style", "display: flex")
+        console.log("getAttribute ", cont.getAttribute("style"))
+        // cont.removeAttribute("style")
+        console.log("attributes", cont.attributes)
+        let box = document.querySelector(".box")
+
+        let newDiv = document.createElement("div")
+        newDiv.innerHTML = "I am new Div"
+        newDiv.setAttribute("style", "color: red; background-color: yellow")
+        box.replaceWith(newDiv)
+        // cont.append(newDiv)
+        // cont.prepend(newDiv)
+        // cont.before(newDiv)
+        // cont.after(newDiv)
+
+        console.log("classList: ", cont.classList)
+        console.log("className: ", cont.className)
+        cont.classList.add("orange")
+        console.log("classList: ", cont.classList)
+        cont.classList.remove("red")
+        console.log("classList: ", cont.classList)
+        cont.classList.toggle("orange")
+        console.log("classList: ", cont.classList)
+        console.log("contains: ", cont.classList.contains("red"))
+
+    </script>
+</body>
+</html>
