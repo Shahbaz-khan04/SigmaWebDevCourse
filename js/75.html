@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks, Promises</title>
+</head>
+<body>
+    
+
+    <script>
+        // const callback2 = () => console.log("Nothing")
+        // const callback = (arg, callback2) => {
+        //     console.log(arg)
+        //     callback2()
+        // }
+
+        // const loadScript = (src, callback) => {
+        //   let sc = document.createElement("script")
+        //   sc.src = src
+        //   sc.onload = callback("harry", callback2)
+        // }
+
+        let prom1 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Yes i am done.")
+            resolve("Harry")
+          }, 3000);
+        })
+        
+        prom1.then((a)=> {
+            console.log(a);
+        })
+
+        console.log("hello");
+
+
+        
+    </script>
+</body>
+</html>
