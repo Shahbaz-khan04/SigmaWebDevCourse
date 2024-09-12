@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async, await</title>
+  </head>
+  <body>
+    <script>
+    //   function getData() {
+    //     return new Promise((res, rej) => {
+    //       setTimeout(() => {
+    //         console.log("Hi");
+    //         res(455);
+    //       }, 3500);
+    //     });
+    //   }
+      async function getData() {
+        let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        let data = await x.text()
+        return data
+      }
+      async function main() {
+        console.log("hello 1");
+        console.log("hello 2");
+        let data = await getData();
+        console.log(data);
+        console.log("process data");
+        console.log("task 2");
+      }
+
+      main()
+    </script>
+  </body>
+</html>
